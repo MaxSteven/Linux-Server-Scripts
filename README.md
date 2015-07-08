@@ -1,2 +1,3 @@
-# switchDefaultGateways
-This script switch the default route when one is down.
+# Linux-Firewall-Router-QoS
+
+Scripts for different Firewall/Router Settings and Services 
