@@ -42,15 +42,17 @@ if [ `ip route | awk -F' ' '/default/{print $NF}'` == $dev1 ]; then
         # change default gateway
         ip route del default dev $dev1
         ip route add default via $gate2 dev $dev2
-
+        
+        sleep 10
         # send status to email
-        echo "Kabel Deutschland is down, change to Telekom `date +'%Y-%m-%d %H:%M'`" | mailx -s "Internet Connnection has change" $mailto
+        echo "Kabel Deutschland is down, change to Telekom `date +'%Y-%m-%d %H:%M'`" | mailx -s "Internet Connnection has changed" $mailto
 else
         # change default gateway
         ip route del default dev $dev2
         ip route add default via $gate1 dev $dev1
 
-        echo "Telekom is down, change to Kabel Deutschland `date +'%Y-%m-%d %H:%M'`" | mailx -s "Internet Connnection has change" $mailto
+        sleep 10
+        echo "Telekom is down, change to Kabel Deutschland `date +'%Y-%m-%d %H:%M'`" | mailx -s "Internet Connnection has changed" $mailto
 fi
 
 #reset PATH to old variable
