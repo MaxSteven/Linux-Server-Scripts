@@ -1,6 +1,6 @@
-# Linux-Firewall-Router-QoS
+# Linux-Server-Scripts
 
-Scripts for different Firewall/Router Settings and Services 
+Scripts for different Firewall/Router/Server Settings and Services 
 
 
 Refference for fwBuilder
